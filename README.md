@@ -1,4 +1,4 @@
-# Webpack frontend skeleton
+# Webpack React Skeleton
 
 ## Initialization
 
@@ -40,3 +40,8 @@ For running webpack for watching with production configuration you can enter:
 ## Project structure
 
 TODO
+
+## TODO
+
+* Connect the [Redux-Devtools](https://github.com/gaearon/redux-devtools).
+* Add support for [React Hot Loader](https://gaearon.github.io/react-hot-loader/)
