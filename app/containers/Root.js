@@ -1,17 +1,18 @@
 import React from 'react'
-import { Router } from 'react-router-dom'
+import PropTypes from 'prop-types'
+import { ConnectedRouter } from 'react-router-redux'
 import { Provider } from 'react-redux'
-
 import routes from '../routes'
 
 const Root = ({store, history}) => (
   <Provider store={store}>
-    <Router history={history} routes={routes} />
+    <ConnectedRouter history={history} children={routes} />
   </Provider>
 )
 
 Root.propTypes = {
-  store: React.PropTypes.object.isRequired,
+  store: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired
 }
 
 export default Root

@@ -2,18 +2,15 @@
 require.context('./assets/', true)
 require('./stylesheets/application.sass')
 
-// React-Router
+// SPA
 import React from 'react'
 import { render } from 'react-dom'
-import Root from './containers/Root.js'
-
-// Redux
+import createHistory from 'history/createBrowserHistory'
 import configureStore from './store/configureStore'
-import { browserHistory } from 'react-router-dom'
-import { syncHistoryWithStore } from 'react-router-redux'
+import Root from './containers/Root'
 
-const store   = configureStore()
-const history = syncHistoryWithStore(browserHistory, store)
+const history = createHistory()
+const store   = configureStore(history)
 
 render(
   <Root store={store} history={history} />,

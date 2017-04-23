@@ -1,4 +1,6 @@
 import React from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 
 class App extends React.Component {
@@ -7,6 +9,7 @@ class App extends React.Component {
       <div className="wrapper">
         <div className="sidebar">
           <NavLink to="/">Home</NavLink>
+          <NavLink to="/about">About</NavLink>
         </div>
 
         <div className="content">
@@ -17,4 +20,14 @@ class App extends React.Component {
   }
 }
 
-export default App
+const mapStateToProps = (state) => {
+  return state;
+}
+const mapDispatchToProps = (dispatch) => {
+  return { actions: bindActionCreators({}, dispatch) }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App)
