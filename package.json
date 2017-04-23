@@ -15,7 +15,7 @@
   "author": "Dmitry Ruban <dkruban@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RuBAN-GT/webpack-frontend-skeleton"
+    "url": "https://github.com/RuBAN-GT/webpack-react-skeleton"
   },
   "license": "ISC",
   "devDependencies": {
