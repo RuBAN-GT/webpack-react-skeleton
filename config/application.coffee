@@ -1,13 +1,8 @@
 webpack           = require('webpack')
 path              = require('path')
-ExtractTextPlugin = require('extract-text-webpack-plugin')
 HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports =
-  entry:
-    app: path.join(__dirname, '../app/app.js')
-    vendor: path.join(__dirname, '../app/vendor.js')
-
   output:
     filename: 'js/[name].js'
     path: path.resolve(__dirname, '../public/assets')
@@ -19,13 +14,12 @@ module.exports =
     new HtmlWebpackPlugin
       template: 'app/index.html'
       inject: 'body'
+      alwaysWriteToDisk: true
       filename: path.join('../index.html')
 
     new webpack.optimize.CommonsChunkPlugin
       name: 'vendor'
       children: true
-
-    new ExtractTextPlugin('css/app.css')
 
     new webpack.LoaderOptionsPlugin
       options: postcss: [ require('autoprefixer') ]
@@ -62,11 +56,6 @@ module.exports =
           name: '[path]/[name].[ext]'
     }
     {
-      test: /\.(sass|scss)$/
-      use: ExtractTextPlugin.extract
-        use: [ 'css-loader', 'postcss-loader', 'sass-loader' ]
-    }
-    {
       enforce: 'pre'
       test: /\.(js|jsx)$/
       exclude: /node_modules/,
@@ -79,8 +68,6 @@ module.exports =
     {
       test: /\.(js|jsx)$/
       exclude: /node_modules/,
-      use:
-        loader: 'babel-loader'
-        options: presets: [ 'es2015', 'react', 'env' ]
+      use: 'babel-loader'
     }
   ]

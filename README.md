@@ -43,5 +43,4 @@ TODO
 
 ## TODO
 
-* Add support for [React Hot Loader](https://gaearon.github.io/react-hot-loader/)
 * Connect the [Redux-Devtools](https://github.com/gaearon/redux-devtools).
