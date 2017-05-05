@@ -40,7 +40,3 @@ For running webpack for watching with production configuration you can enter:
 ## Project structure
 
 TODO
-
-## TODO
-
-* Connect the [Redux-Devtools](https://github.com/gaearon/redux-devtools).
