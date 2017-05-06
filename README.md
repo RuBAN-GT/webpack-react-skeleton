@@ -31,12 +31,6 @@ It's configuration uses environment separation. For settings special environment
 | watch      | Watch changes with unassigned environment.        |
 | eslint     | Check your project with eslint.                   |
 
-**Example**
-
-For running webpack for watching with production configuration you can enter:
-
-> NODE_ENV=production npm run watch
-
 ## Project structure
 
 TODO

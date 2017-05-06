@@ -1,13 +1,19 @@
-require('coffee-script/register');
-
 const webpackMerge = require('webpack-merge');
-const commonConfig = require(`./config/application.coffee`);
+const commonConfig = require('./config/webpack.config.application.js');
 
 module.exports = function() {
-  env = (process.env.NODE_ENV) ? process.env.NODE_ENV : 'development';
+  if (process.env.NODE_ENV == 'development') {
+    env = 'dev'
+  }
+  else if (process.env.NODE_ENV == 'production') {
+    env = 'prod'
+  }
+  else {
+    env = process.env.NODE_ENV
+  }
 
   return webpackMerge(
     commonConfig,
-    require(`./config/${env}.coffee`)
+    require(`./config/webpack.config.${env}.js`)
   );
 };

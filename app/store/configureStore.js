@@ -1,21 +1,6 @@
-import { createStore, applyMiddleware } from 'redux'
-import thunk from 'redux-thunk'
-import { routerMiddleware } from 'react-router-redux'
-import { composeWithDevTools } from 'redux-devtools-extension';
-import rootReducer from '../reducers'
-
-const configureStore = (history) => {
-  let middleware = routerMiddleware(history)
-
-  let enhancer = applyMiddleware(thunk, middleware)
-  if(module.hot) {
-    enhancer = composeWithDevTools(enhancer)
-  }
-
-  return createStore(
-    rootReducer,
-    enhancer
-  )
-};
-
-export default configureStore
+if (process.env.NODE_ENV == 'development') {
+  module.exports = require('./configureStore.dev.js')
+}
+else {
+  module.exports = require('./configureStore.prod.js')
+}

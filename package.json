@@ -1,16 +1,20 @@
 {
   "name": "webpack-frontend-skeleton",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "",
   "main": "",
-  "keywords": [],
+  "keywords": [
+    "skeleton",
+    "es2015",
+    "react",
+    "redux",
+    "react-router-redux"
+  ],
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server",
-    "build": "webpack --progress",
-    "build:dev": "NODE_ENV=development webpack --progress",
-    "build:prod": "NODE_ENV=production webpack --progress",
-    "watch": "webpack --watch --progress --verbose",
-    "eslint": "eslint ."
+    "build": "rimraf public && NODE_ENV=production webpack --progress --colors",
+    "watch": "rimraf public && NODE_ENV=production webpack --watch --progress --verbose --colors",
+    "eslint": "eslint app"
   },
   "author": "Dmitry Ruban <dkruban@gmail.com>",
   "repository": {
@@ -40,6 +44,7 @@
     "lodash": "^4.17.4",
     "node-sass": "^4.5.2",
     "postcss-loader": "^1.3.3",
+    "rimraf": "^2.6.1",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1",
     "uglify-js": "git://github.com/mishoo/UglifyJS2#harmony",

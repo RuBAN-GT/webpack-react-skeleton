@@ -20,7 +20,7 @@ render(
   document.getElementById('root')
 )
 
-if(module.hot) {
+if (module.hot) {
   module.hot.accept('./containers/Root', () => {
     const NewRoot = require('./containers/Root').default;
     render(
