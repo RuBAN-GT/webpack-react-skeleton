@@ -55,6 +55,7 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
+    "history": "^4.6.3",
     "react": "^15.5.4",
     "react-addons-perf": "^15.4.2",
     "react-dom": "^15.5.4",

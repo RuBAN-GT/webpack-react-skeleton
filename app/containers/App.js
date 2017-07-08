@@ -15,12 +15,12 @@ class App extends React.Component {
           {this.props.children}
         </div>
       </div>
-    );
+    )
   }
 }
 
 const mapStateToProps = (state) => {
-  return state;
+  return state
 }
 
 export default connect(

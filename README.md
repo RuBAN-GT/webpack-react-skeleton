@@ -2,19 +2,19 @@
 
 ## Initialization
 
-It's common webpack project, for future usage you should install node.js and run:
+It's common webpack project, for future usage You should install node.js and run:
 
-> npm install
+> yarn install
 
 ## Usage
 
-For building your bundle you must run:
+For building your bundle You must run:
 
-> webpack
+> yarn run build
 
-or use npm scripts
+Or start development server:
 
-> npm run build
+> yarn start
 
 ### Scripts
 
