@@ -7,15 +7,11 @@ import rootReducer from '../reducers'
 const configureStore = (history) => {
   let middleware = routerMiddleware(history)
 
-  let enhancer = applyMiddleware(thunk, middleware)
-
-  if (process.env.NODE_ENV == 'development') {
-    enhancer = composeWithDevTools(enhancer)
-  }
-
   return createStore(
     rootReducer,
-    enhancer
+    composeWithDevTools(
+      applyMiddleware(thunk, middleware)
+    )
   )
 };
 

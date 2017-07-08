@@ -10,7 +10,7 @@ module.exports = {
     'webpack/hot/only-dev-server',
     path.join(__dirname, '../app/app.js')
   ],
-  devtool: 'eval-source-map',
+  devtool: 'inline-source-map',
   devServer: {
     contentBase: path.resolve(__dirname, '../public'),
     port: 3333,
@@ -24,6 +24,9 @@ module.exports = {
     new HtmlPlugin(),
     new webpack.DefinePlugin(jsonMerge(
       require('./data.application.json'),
+      {
+        'process.env.NODE_ENV': process.env.NODE_ENV
+      },
       require('./data.dev.json')
     ))
   ],

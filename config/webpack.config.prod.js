@@ -14,6 +14,9 @@ module.exports = {
     new ExtractTextPlugin('css/app.css'),
     new webpack.DefinePlugin(jsonMerge(
       require('./data.application.json'),
+      {
+        'process.env.NODE_ENV': process.env.NODE_ENV
+      },
       require('./data.prod.json')
     ))
   ],
