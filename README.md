@@ -26,8 +26,6 @@ It's configuration uses environment separation. For settings special environment
 |------------|---------------------------------------------------|
 | start      | Start the development server.                     |
 | build      | Build your bundles with unassigned environment.   |
-| build:dev  | Build your bundle with development configuration. |
-| build:prod | Build your bundle with production configuration.  |
 | watch      | Watch changes with unassigned environment.        |
 | eslint     | Check your project with eslint.                   |
 
