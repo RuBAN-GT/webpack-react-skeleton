@@ -4,12 +4,12 @@ import { routerMiddleware } from 'react-router-redux'
 import rootReducer from '../reducers'
 
 const configureStore = (history) => {
-  let middleware = routerMiddleware(history)
+  const router = routerMiddleware(history)
 
   return createStore(
     rootReducer,
-    applyMiddleware(thunk, middleware)
+    applyMiddleware(thunk, router)
   )
-};
+}
 
 export default configureStore
