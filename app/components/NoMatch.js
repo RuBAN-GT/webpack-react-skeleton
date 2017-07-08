@@ -4,6 +4,6 @@ export default class NoMatch extends React.Component {
   render() {
     return (
       <div>No routes...</div>
-    );
+    )
   }
 }
