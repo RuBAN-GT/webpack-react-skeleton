@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { NavLink } from 'react-router-dom'
+import { withRouter, NavLink } from 'react-router-dom'
 
 class App extends React.Component {
   render() {
@@ -23,6 +23,6 @@ const mapStateToProps = (state) => {
   return state
 }
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps
-)(App)
+)(App))
