@@ -10,6 +10,9 @@ module.exports = {
     'webpack/hot/only-dev-server',
     path.join(__dirname, '../app/app.js')
   ],
+  output: {
+    devtoolModuleFilenameTemplate: info => path.resolve(info.absoluteResourcePath)
+  },
   devtool: 'inline-source-map',
   devServer: {
     contentBase: path.resolve(__dirname, '../public'),
