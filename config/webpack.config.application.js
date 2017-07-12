@@ -12,13 +12,7 @@ module.exports = {
     alias: {
       vendor: path.resolve(__dirname, '../vendor/'),
       root: path.resolve(__dirname, '../app/'),
-      actions: path.resolve(__dirname, '../app/actions/'),
       assets: path.resolve(__dirname, '../app/assets/'),
-      components: path.resolve(__dirname, '../app/components/'),
-      constants: path.resolve(__dirname, '../app/constants/'),
-      containers: path.resolve(__dirname, '../app/containers/'),
-      reducers: path.resolve(__dirname, '../app/reducers/'),
-      store: path.resolve(__dirname, '../app/store/'),
       stylesheets: path.resolve(__dirname, '../app/stylesheets/')
     },
     extensions: ['.js', '.jsx']

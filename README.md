@@ -28,6 +28,7 @@ It's configuration uses environment separation. For settings special environment
 | build      | Build your bundles with unassigned environment.   |
 | watch      | Watch changes with unassigned environment.        |
 | eslint     | Check your project with eslint.                   |
+| test       | Start jest tests                                  |
 
 ## Project structure
 

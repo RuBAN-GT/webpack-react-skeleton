@@ -1,10 +1,19 @@
 {
-  "presets": [
-    [ "es2015", { "modules": false } ],
-    [ "env", { "modules": false } ],
-    "react"
-  ],
+  "env": { "test": { "plugins": [ "transform-es2015-modules-commonjs" ] } },
   "plugins": [
+    ["module-resolver", {
+      "root": ["./app"],
+      "alias": {
+        "actions": "./actions",
+        "assets": "./assets",
+        "components": "./components",
+        "constants": "./constants",
+        "containers": "./containers",
+        "reducers": "./reducers",
+        "store": "./store"
+      }
+    }],
     "react-hot-loader/babel"
-  ]
+  ],
+  "presets": [ "es2015", "env", "react" ]
 }
