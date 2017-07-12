@@ -1,7 +1,6 @@
 const webpack    = require('webpack');
 const path       = require('path');
 const HtmlPlugin = require('html-webpack-harddisk-plugin');
-const jsonMerge  = require('../scripts/json-merge');
 
 module.exports = {
   entry: [
@@ -24,14 +23,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
-    new HtmlPlugin(),
-    new webpack.DefinePlugin(jsonMerge(
-      require('./data.application.json'),
-      {
-        'process.env.NODE_ENV': process.env.NODE_ENV
-      },
-      require('./data.dev.json')
-    ))
+    new HtmlPlugin()
   ],
   module: {
     rules: [

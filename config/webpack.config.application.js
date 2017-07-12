@@ -23,6 +23,9 @@ module.exports = {
       inject: 'body',
       alwaysWriteToDisk: true,
       filename: path.join('../index.html')
+    }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     })
   ],
   module: {
