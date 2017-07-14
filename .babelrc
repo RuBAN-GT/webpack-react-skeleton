@@ -4,13 +4,13 @@
     ["module-resolver", {
       "root": ["./app"],
       "alias": {
-        "actions": "./actions",
-        "assets": "./assets",
-        "components": "./components",
-        "constants": "./constants",
-        "containers": "./containers",
-        "reducers": "./reducers",
-        "store": "./store"
+        "actions": "./app/actions",
+        "assets": "./app/assets",
+        "components": "./app/components",
+        "constants": "./app/constants",
+        "containers": "./app/containers",
+        "reducers": "./app/reducers",
+        "store": "./app/store"
       }
     }],
     "react-hot-loader/babel"
