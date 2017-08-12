@@ -3,7 +3,10 @@ const UglifyJSPlugin    = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: path.join(__dirname, '../app/app.js'),
+  entry: [
+    'babel-polyfill',
+    path.join(__dirname, '../app/app.js')
+  ],
   devtool: 'nosources-source-map',
   plugins: [
     new UglifyJSPlugin({

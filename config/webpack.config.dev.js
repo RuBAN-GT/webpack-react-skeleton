@@ -3,6 +3,7 @@ const path    = require('path');
 
 module.exports = {
   entry: [
+    'babel-polyfill',
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:3333',
     'webpack/hot/only-dev-server',
