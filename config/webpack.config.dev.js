@@ -1,6 +1,5 @@
-const webpack    = require('webpack');
-const path       = require('path');
-const HtmlPlugin = require('html-webpack-harddisk-plugin');
+const webpack = require('webpack');
+const path    = require('path');
 
 module.exports = {
   entry: [
@@ -22,8 +21,7 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin(),
-    new HtmlPlugin()
+    new webpack.NamedModulesPlugin()
   ],
   module: {
     rules: [

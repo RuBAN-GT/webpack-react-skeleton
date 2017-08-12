@@ -1,6 +1,8 @@
-const webpack           = require('webpack');
-const path              = require('path');
+const webpack = require('webpack');
+const path    = require('path');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 
 module.exports = {
   output: {
@@ -24,6 +26,7 @@ module.exports = {
       alwaysWriteToDisk: true,
       filename: path.join('../index.html')
     }),
+    new HtmlWebpackHarddiskPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     })

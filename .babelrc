@@ -15,5 +15,15 @@
     }],
     "react-hot-loader/babel"
   ],
-  "presets": [ "es2015", "env", "react" ]
+  "presets": [ 
+    "es2015", 
+    ["env", {
+      "targets": {
+        "browsers": ["last 8 versions", "ie >= 9"]
+      },
+      "useBuiltIns": true,
+      "debug": true
+    }], 
+    "react" 
+  ]
 }
