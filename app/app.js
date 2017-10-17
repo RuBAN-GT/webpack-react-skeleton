@@ -4,16 +4,11 @@ require('./stylesheets/application.sass')
 
 // SPA
 import React from 'react'
-import Perf from 'react-addons-perf'
 import { render } from 'react-dom'
 import createHistory from 'history/createBrowserHistory'
 import { AppContainer } from 'react-hot-loader'
 import configureStore from 'store/configureStore'
 import Root from 'containers/Root'
-
-if (process.env.NODE_ENV == 'development') {
-  window.Perf = Perf
-}
 
 const history = createHistory()
 const store   = configureStore(history)
