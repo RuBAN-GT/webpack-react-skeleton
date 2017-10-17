@@ -2,5 +2,4 @@ config
 public
 node_modules
 vendor
-*.coffee
 webpack.*.js

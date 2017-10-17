@@ -12,9 +12,7 @@ module.exports = {
     new UglifyJSPlugin({
       parallel: true,
       sourceMap: true,
-      uglifyOptions: {
-        ecma: 6
-      }
+      uglifyOptions: { ecma: 6 }
     }),
     new ExtractTextPlugin('css/app.css')
   ],
