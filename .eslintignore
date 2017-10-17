@@ -1,5 +1,5 @@
 config
-public
+dist
 node_modules
 vendor
 webpack.*.js

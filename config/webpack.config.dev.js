@@ -10,15 +10,17 @@ module.exports = {
     path.join(__dirname, '../app/app.js')
   ],
   output: {
-    devtoolModuleFilenameTemplate: info => path.resolve(info.absoluteResourcePath)
+    devtoolModuleFilenameTemplate: info => path.resolve(info.absoluteResourcePath),
+    filename: 'js/[name].js'
   },
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: path.resolve(__dirname, '../public'),
-    port: 3333,
-    watchContentBase: true,
+    contentBase: path.resolve(__dirname, '../dist'),
+    historyApiFallback: true,
+    host: '0.0.0.0',
     hot: true,
-    historyApiFallback: true
+    port: 3333,
+    watchContentBase: true
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

@@ -1,13 +1,13 @@
 const webpack = require('webpack');
 const path    = require('path');
 
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 
 module.exports = {
   output: {
-    filename: 'js/[name].js',
-    path: path.resolve(__dirname, '../public/assets'),
+    path: path.resolve(__dirname, '../dist/assets'),
     publicPath: '/assets/'
   },
   resolve: {
@@ -20,11 +20,14 @@ module.exports = {
     extensions: ['.js', '.jsx']
   },
   plugins: [
+    new CleanWebpackPlugin(['dist/assets'], {
+      root: path.resolve(__dirname, '../')
+    }),
     new HtmlWebpackPlugin({
-      template: 'app/index.html',
-      inject: 'body',
       alwaysWriteToDisk: true,
-      filename: path.join('../index.html')
+      filename: path.join('../index.html'),
+      inject: 'body',
+      template: path.join(__dirname, '../app/index.html')
     }),
     new HtmlWebpackHarddiskPlugin(),
     new webpack.DefinePlugin({
@@ -34,7 +37,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(woff|woff2|eot|otf|ttf|svg)$/,
+        test: /\.(woff(2)?|eot|otf|ttf|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         exclude: [path.resolve(__dirname, '../app/assets')],
         use: {
           loader: 'file-loader',
@@ -46,7 +49,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(png|jpg|gif|ico)$/,
+        test: /\.(png|jpg(eg)?|gif|ico)$/,
         exclude: [path.resolve(__dirname, '../app/assets')],
         use: {
           loader: 'file-loader',

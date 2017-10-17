@@ -7,14 +7,15 @@ module.exports = {
     'babel-polyfill',
     path.join(__dirname, '../app/app.js')
   ],
+  output: { filename: 'js/[name].[chunkhash].js' },
   devtool: 'nosources-source-map',
   plugins: [
+    new ExtractTextPlugin('css/app.[chunkhash].css'),
     new UglifyJSPlugin({
       parallel: true,
       sourceMap: true,
       uglifyOptions: { ecma: 6 }
-    }),
-    new ExtractTextPlugin('css/app.css')
+    })
   ],
   module: {
     rules: [

@@ -25,4 +25,5 @@ Thumbs.db
 node_modules
 
 # Webpack output folder.
-public
+dist/*
+!dist/.gitkeep

@@ -45,4 +45,5 @@ It's configuration uses environment separation. For settings special environment
 | /app/app.js     | Application entry point                           |
 | /app/index.html | Application startup html                          |
 | /config         | Webpack configuration                             |
+| /dist           | Webpack bundle                                    |
 | /vendor         | Vendor libs                                       |
