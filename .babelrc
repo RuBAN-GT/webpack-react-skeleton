@@ -10,13 +10,16 @@
         "constants": "./app/constants",
         "containers": "./app/containers",
         "reducers": "./app/reducers",
+        "root": "./app",
         "store": "./app/store"
       }
     }],
     "react-hot-loader/babel"
   ],
   "presets": [
-    "es2015",
+    ["es2015", {
+      "modules": false 
+    }],
     ["env", {
       "targets": { "browsers": ["last 8 versions"] },
       "useBuiltIns": true

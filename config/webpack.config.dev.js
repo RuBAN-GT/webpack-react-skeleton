@@ -5,22 +5,17 @@ module.exports = {
   entry: [
     'babel-polyfill',
     'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:3333',
-    'webpack/hot/only-dev-server',
     path.join(__dirname, '../app/app.js')
   ],
   output: {
-    devtoolModuleFilenameTemplate: info => path.resolve(info.absoluteResourcePath),
     filename: 'js/[name].js'
   },
   devtool: 'inline-source-map',
   devServer: {
     contentBase: path.resolve(__dirname, '../dist'),
     historyApiFallback: true,
-    host: '0.0.0.0',
     hot: true,
-    port: 3333,
-    watchContentBase: true
+    port: 3333
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { withRouter, NavLink } from 'react-router-dom'
 
-const App = ({children}) => (
+const Layout = ({children}) => (
   <div className="wrapper">
     <div className="sidebar">
       <NavLink to="/">Home</NavLink>
@@ -21,4 +21,4 @@ const mapStateToProps = (state) => {
 
 export default withRouter(connect(
   mapStateToProps
-)(App))
+)(Layout))
