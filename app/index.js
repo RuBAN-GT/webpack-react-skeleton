@@ -8,7 +8,7 @@ import { render } from 'react-dom'
 import createHistory from 'history/createBrowserHistory'
 import { AppContainer } from 'react-hot-loader'
 import configureStore from 'store/configureStore'
-import Root from 'containers/Root'
+import RootContainer from 'containers/RootContainer'
 
 const history = createHistory()
 const store   = configureStore(history)
@@ -16,18 +16,18 @@ const store   = configureStore(history)
 const renderRoot = Component => {
   render(
     <AppContainer>
-      <Component store={store} history={history} />
+      <Component history={history} store={store} />
     </AppContainer>,
     document.getElementById('root')
   )
 }
 
-renderRoot(Root)
+renderRoot(RootContainer)
 
 if (process.env.NODE_ENV == 'development' && module.hot) {
-  module.hot.accept('./containers/Root', () => {
-    const NewRoot = require('containers/Root').default
+  module.hot.accept('./containers/RootContainer', () => {
+    const NewRootContainer = require('containers/RootContainer').default
 
-    renderRoot(NewRoot)
+    renderRoot(NewRootContainer)
   })
 }

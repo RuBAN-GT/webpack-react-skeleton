@@ -1,27 +1,30 @@
 {
-  "env": { "test": { "plugins": [ "transform-es2015-modules-commonjs" ] } },
+  "env": {
+    "test": {
+      "plugins": [ "transform-es2015-modules-commonjs" ]
+    }
+  },
   "plugins": [
     ["module-resolver", {
       "root": ["./app"],
       "alias": {
+        "~": "./app",
         "actions": "./app/actions",
         "assets": "./app/assets",
         "components": "./app/components",
+        "config": "./config",
         "constants": "./app/constants",
         "containers": "./app/containers",
+        "pages": "./app/pages",
         "reducers": "./app/reducers",
-        "root": "./app",
         "store": "./app/store"
       }
     }],
     "react-hot-loader/babel"
   ],
   "presets": [
-    ["es2015", {
-      "modules": false 
-    }],
     ["env", {
-      "targets": { "browsers": ["last 8 versions"] },
+      "targets": { "browsers": ["last 5 versions"] },
       "useBuiltIns": true
     }],
     "react"

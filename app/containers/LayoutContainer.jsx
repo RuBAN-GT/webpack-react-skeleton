@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { withRouter, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
-const Layout = ({children}) => (
+const LayoutContainer = ({children}) => (
   <div className="wrapper">
     <div className="sidebar">
       <NavLink to="/">Home</NavLink>
@@ -15,10 +15,8 @@ const Layout = ({children}) => (
   </div>
 )
 
-const mapStateToProps = (state) => {
-  return state
+const mapStateToProps = ({ router }) => {
+  return { router }
 }
 
-export default withRouter(connect(
-  mapStateToProps
-)(Layout))
+export default connect(mapStateToProps)(LayoutContainer)

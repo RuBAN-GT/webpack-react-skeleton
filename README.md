@@ -29,21 +29,28 @@ It's configuration uses environment separation. For settings special environment
 | watch      | Watch changes with unassigned environment.        |
 | eslint     | Check your project with eslint.                   |
 | test       | Start jest tests                                  |
+| test:debug | Debug your tests with watch mode                  |
+| test:watch | Start jest tests with watch mode                  |
 
 ## Project structure
 
-| Path            | Description                                       |
-|-----------------|---------------------------------------------------|
-| /app            | Your application                                  |
-| /app/actions    | Redux actions                                     |
-| /app/assets     | Assets (such as fonts, images, etc)               |
-| /app/components | React components                                  |
-| /app/constants  | JS constants (for example, constants for actions) |
-| /app/containers | React containers                                  |
-| /app/reducers   | Redux reducers                                    |
-| /app/store      | Redux store                                       |
-| /app/app.js     | Application entry point                           |
-| /app/index.html | Application startup html                          |
-| /config         | Webpack configuration                             |
-| /dist           | Webpack bundle                                    |
-| /vendor         | Vendor libs                                       |
+| Path             | Description                                       |
+|------------------|---------------------------------------------------|
+| /app             | Your application                                  |
+| /app/actions     | Redux actions                                     |
+| /app/assets      | Assets (such as fonts, images, etc)               |
+| /app/components  | React components                                  |
+| /app/constants   | JS constants (for example, constants for actions) |
+| /app/containers  | React containers                                  |
+| /app/pages       | React components with page logic                  |
+| /app/reducers    | Redux reducers                                    |
+| /app/store       | Redux store                                       |
+| /app/app.js      | Application entry point                           |
+| /app/index.html  | Application startup html                          |
+| /config          | Project configuration                             |
+| config/jest      | Jest settings and setup                           |
+| config/misc      | Other configuration scripts                       |
+| config/variables | Webpack variables for your application            |
+| config/webpack   | Webpack configuration by environments             |
+| /dist            | Webpack bundle                                    |
+| /vendor          | Vendor libs                                       |
