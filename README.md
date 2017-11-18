@@ -51,7 +51,6 @@ It's configuration uses environment separation. For settings special environment
 | /app/app.js       | Application entry point                           |
 | /app/index.html   | Application startup html                          |
 | /config           | Project configuration                             |
-| /config/jest      | Jest settings and setup                           |
 | /config/misc      | Other configuration scripts                       |
 | /config/variables | Webpack variables for your application            |
 | /config/webpack   | Webpack configuration by environments             |
