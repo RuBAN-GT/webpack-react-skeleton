@@ -29,6 +29,7 @@ It's configuration uses environment separation. For settings special environment
 | watch          | Watch changes with unassigned environment.        |
 | eslint         | Check your project with eslint.                   |
 | eslint:fix     | Fix project conflicts with eslint.                |
+| precommit      | Run precommit hook                                |
 | prettier       | Handle application files with Prettier.           |
 | prettier:write | Write handling of Prettier in your source.        |
 | test           | Start jest tests                                  |
