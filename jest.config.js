@@ -4,6 +4,6 @@ const vars = require('./misc/webpackVariables')('production')
 module.exports = {
   globals: vars,
   rootDir: path.resolve(__dirname, '../'),
-  testPathIgnorePatterns: [ '<rootDir>/node_modules/'],
+  testPathIgnorePatterns: ['<rootDir>/node_modules/'],
   verbose: true
 }
