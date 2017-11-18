@@ -11,7 +11,7 @@ import configureStore from 'store/configureStore'
 import RootContainer from 'containers/RootContainer'
 
 const history = createHistory()
-const store   = configureStore(history)
+const store = configureStore(history)
 
 const renderRoot = Component => {
   render(

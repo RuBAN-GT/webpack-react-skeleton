@@ -22,15 +22,18 @@ It's configuration uses environment separation. For settings special environment
 
 **Package scripts:**
 
-| Command    | Description                                       |
-|------------|---------------------------------------------------|
-| start      | Start the development server.                     |
-| build      | Build your bundles with unassigned environment.   |
-| watch      | Watch changes with unassigned environment.        |
-| eslint     | Check your project with eslint.                   |
-| test       | Start jest tests                                  |
-| test:debug | Debug your tests with watch mode                  |
-| test:watch | Start jest tests with watch mode                  |
+| Command        | Description                                       |
+|----------------|---------------------------------------------------|
+| start          | Start the development server.                     |
+| build          | Build your bundles with unassigned environment.   |
+| watch          | Watch changes with unassigned environment.        |
+| eslint         | Check your project with eslint.                   |
+| eslint:fix     | Fix project conflicts with eslint.                |
+| prettier       | Handle application files with Prettier.           |
+| prettier:write | Write handling of Prettier in your source.        |
+| test           | Start jest tests                                  |
+| test:debug     | Debug your tests with watch mode                  |
+| test:watch     | Start jest tests with watch mode                  |
 
 ## Project structure
 

@@ -5,9 +5,9 @@ import { ConnectedRouter } from 'react-router-redux'
 
 import routes from '~/routes'
 
-const RootContainer = ({history, store}) => (
+const RootContainer = ({ history, store }) => (
   <Provider store={store}>
-    <ConnectedRouter history={history} children={routes} />
+    <ConnectedRouter history={history}>{routes}</ConnectedRouter>
   </Provider>
 )
 

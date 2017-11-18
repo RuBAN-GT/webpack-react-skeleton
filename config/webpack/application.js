@@ -70,6 +70,18 @@ module.exports = {
         }
       },
       {
+        enforce: 'pre',
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'eslint-loader',
+          options: {
+            failOnWarning: false,
+            failOnError: true
+          }
+        }
+      },
+      {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: 'babel-loader'

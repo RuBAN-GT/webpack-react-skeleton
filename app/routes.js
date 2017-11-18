@@ -10,9 +10,9 @@ import NoMatch from 'pages/NoMatch'
 export default (
   <LayoutContainer>
     <Switch>
-      <Route exact path='/' component={Home} />
-      <Route path='/about' component={About} />
-      <Route component={NoMatch}/>
+      <Route exact path="/" component={Home} />
+      <Route path="/about" component={About} />
+      <Route component={NoMatch} />
     </Switch>
   </LayoutContainer>
 )
