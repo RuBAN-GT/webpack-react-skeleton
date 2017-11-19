@@ -11,7 +11,9 @@ const path = require('path')
  * @return {Object}
  */
 module.exports = function(env = null) {
-  let variables = [ require(path.join(__dirname, '../variables/application.json')) ]
+  let variables = [
+    require(path.join(__dirname, '../variables/application.json'))
+  ]
 
   if (env && fs.existsSync(path.join(__dirname, `../variables/${env}.json`))) {
     variables.push(require(path.join(__dirname, `../variables/${env}.json`)))

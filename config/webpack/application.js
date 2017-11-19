@@ -1,8 +1,8 @@
 const webpack = require('webpack')
-const path    = require('path')
+const path = require('path')
 
-const CleanPlugin    = require('clean-webpack-plugin')
-const HtmlPlugin     = require('html-webpack-plugin')
+const CleanPlugin = require('clean-webpack-plugin')
+const HtmlPlugin = require('html-webpack-plugin')
 const HarddiskPlugin = require('html-webpack-harddisk-plugin')
 
 module.exports = {
@@ -15,7 +15,7 @@ module.exports = {
       root: path.resolve(__dirname, '../../app/'),
       assets: path.resolve(__dirname, '../../app/assets/'),
       stylesheets: path.resolve(__dirname, '../../app/stylesheets/'),
-      vendor: path.resolve(__dirname, '../../app/vendor/'),
+      vendor: path.resolve(__dirname, '../../app/vendor/')
     },
     extensions: ['.js', '.jsx']
   },
