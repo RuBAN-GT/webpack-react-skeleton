@@ -17,6 +17,7 @@ module.exports = function(env = null) {
 
   if (env && fs.existsSync(path.join(__dirname, `../variables/${env}.json`))) {
     variables.push(require(path.join(__dirname, `../variables/${env}.json`)))
+    variables.push({ 'process.env.REAL_ENV': env })
   }
 
   return handleVariables(...variables)

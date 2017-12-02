@@ -27,3 +27,4 @@ node_modules
 # Webpack output folder.
 dist/*
 !dist/.gitkeep
+coverage

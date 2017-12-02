@@ -13,6 +13,10 @@ module.exports = {
     contentBase: path.resolve(__dirname, '../../dist'),
     historyApiFallback: true,
     hot: true,
+    overlay: {
+      warnings: false,
+      errors: true
+    },
     port: 3333
   },
   devtool: 'inline-cheap-module-source-map',

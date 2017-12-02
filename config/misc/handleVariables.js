@@ -5,15 +5,15 @@ const _ = require('lodash')
  *
  * @see https://webpack.js.org/plugins/define-plugin/
  *
- * @param  {Object} object
+ * @param  {Array} object
  * @return {Object}
  */
 module.exports = function(...objects) {
-  const result = {}
+  let result = {}
 
   objects.forEach(object => {
-    _.merge(result, _.mapValues(object, item => JSON.stringify(item)))
+    result = _.merge(result, object)
   })
 
-  return result
+  return _.mapValues(result, item => JSON.stringify(item))
 }

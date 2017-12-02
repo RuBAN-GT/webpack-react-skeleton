@@ -4,10 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   entry: ['babel-polyfill', path.join(__dirname, '../../app/index.js')],
-  output: {
-    filename: 'js/[name].[chunkhash].js',
-    publicPath: 'assets/'
-  },
+  output: { filename: 'js/[name].[chunkhash].js' },
   devtool: 'nosources-source-map',
   plugins: [
     new ExtractTextPlugin('css/app.[chunkhash].css'),
