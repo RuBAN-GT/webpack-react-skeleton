@@ -9,16 +9,11 @@
     "url": "https://github.com/RuBAN-GT/webpack-react-skeleton"
   },
   "license": "ISC",
-  "keywords": [
-    "skeleton",
-    "es2015",
-    "react",
-    "redux",
-    "react-router-redux"
-  ],
+  "keywords": ["skeleton", "es2015", "react", "redux", "react-router-redux"],
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server",
-    "watch": "NODE_ENV=production webpack --watch --progress --verbose --colors",
+    "watch":
+      "NODE_ENV=production webpack --watch --progress --verbose --colors",
     "build": "NODE_ENV=production webpack --progress --colors",
     "eslint": "eslint 'app/**/*.js*'",
     "eslint:fix": "eslint --fix 'app/**/*.js*'",
@@ -26,15 +21,12 @@
     "prettier": "prettier 'app/**.js*'",
     "prettier:write": "prettier --write 'app/**/*.js*'",
     "test": "jest",
-    "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --watchAll --runInBand",
+    "test:debug":
+      "node --inspect-brk ./node_modules/jest/bin/jest.js --watchAll --runInBand",
     "test:watch": "jest --watchAll"
   },
   "lint-staged": {
-    "app/**/*.js*": [
-      "eslint --fix",
-      "yarn run test",
-      "git add"
-    ]
+    "app/**/*.js*": ["eslint --fix", "yarn run test", "git add"]
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",
@@ -45,6 +37,7 @@
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^0.28.0",
     "enzyme": "^3.2.0",
     "enzyme-to-json": "^3.2.2",
@@ -78,7 +71,6 @@
     "webpack-merge": "^4.1.1"
   },
   "dependencies": {
-    "clean-webpack-plugin": "^0.1.17",
     "global": "^4.3.2",
     "history": "^4.6.3",
     "prop-types": "^15.6.0",
