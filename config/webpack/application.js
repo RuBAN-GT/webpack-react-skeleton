@@ -1,4 +1,3 @@
-const webpack = require('webpack')
 const path = require('path')
 
 const CleanPlugin = require('clean-webpack-plugin')
@@ -29,18 +28,16 @@ module.exports = {
       inject: 'body',
       template: path.join(__dirname, '../../app/index.html')
     }),
-    new HarddiskPlugin(),
-    new webpack.optimize.ModuleConcatenationPlugin()
+    new HarddiskPlugin()
   ],
   module: {
     rules: [
       {
         test: /\.(woff(2)?|eot|otf|ttf|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        exclude: [path.resolve(__dirname, '../../app/assets')],
+        exclude: path.resolve(__dirname, '../../app/assets'),
         use: {
           loader: 'file-loader',
           options: {
-            publicPath: '/assets/',
             outputPath: 'fonts/',
             useRelativePath: false
           }
@@ -48,11 +45,10 @@ module.exports = {
       },
       {
         test: /\.(png|jpg(eg)?|gif|ico)$/,
-        exclude: [path.resolve(__dirname, '../../app/assets')],
+        exclude: path.resolve(__dirname, '../../app/assets'),
         use: {
           loader: 'file-loader',
           options: {
-            publicPath: '/assets/',
             outputPath: 'images/',
             useRelativePath: false
           }
@@ -60,7 +56,7 @@ module.exports = {
       },
       {
         test: /.*/,
-        include: [path.resolve(__dirname, '../../app/assets')],
+        include: path.resolve(__dirname, '../../app/assets'),
         use: {
           loader: 'file-loader',
           options: {

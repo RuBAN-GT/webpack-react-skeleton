@@ -17,9 +17,13 @@ module.exports = {
       warnings: false,
       errors: true
     },
-    port: 3333
+    port: 3333,
+    watchOptions: {
+      aggregateTimeout: 300,
+      poll: 1000
+    }
   },
-  devtool: 'inline-cheap-module-source-map',
+  devtool: 'inline-source-map',
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin()
@@ -32,7 +36,25 @@ module.exports = {
       },
       {
         test: /\.(sass|scss)$/,
+        include: path.resolve(__dirname, '../../app/stylesheets'),
         use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
+      },
+      {
+        test: /\.(sass|scss)$/,
+        exclude: path.resolve(__dirname, '../../app/stylesheets'),
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              sourceMap: true,
+              localIdentName: '[name]__[local]___[hash:base64:5]'
+            }
+          },
+          'postcss-loader',
+          'sass-loader'
+        ]
       }
     ]
   }
