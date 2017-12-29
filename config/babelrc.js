@@ -39,9 +39,7 @@ module.exports = {
       'env',
       {
         modules: process.env.NODE_ENV == 'production' ? 'commonjs' : false,
-        targets: {
-          browsers: ['last 5 versions']
-        },
+        targets: { browsers: ['last 5 versions'] },
         useBuiltIns: true
       }
     ],

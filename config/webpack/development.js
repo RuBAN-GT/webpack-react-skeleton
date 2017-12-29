@@ -13,6 +13,7 @@ module.exports = {
     contentBase: path.resolve(__dirname, '../../dist'),
     historyApiFallback: true,
     hot: true,
+    inline: true,
     overlay: {
       warnings: false,
       errors: true

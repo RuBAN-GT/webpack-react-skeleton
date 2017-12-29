@@ -25,7 +25,7 @@ const renderRoot = Component => {
 
 renderRoot(RootContainer)
 
-if (process.env.NODE_ENV == 'development' && module.hot) {
+if (module.hot) {
   module.hot.accept('./containers/RootContainer', () => {
     const NewRootContainer = require('containers/RootContainer').default
 
