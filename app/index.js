@@ -7,8 +7,9 @@ import React from 'react'
 import { render } from 'react-dom'
 import createHistory from 'history/createBrowserHistory'
 import { AppContainer } from 'react-hot-loader'
+
 import configureStore from 'store/configureStore'
-import RootContainer from 'containers/RootContainer'
+import { RootContainer } from 'containers'
 
 const history = createHistory()
 const store = configureStore(history)

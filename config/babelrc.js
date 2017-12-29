@@ -26,7 +26,8 @@ module.exports = {
           containers: './app/containers',
           pages: './app/pages',
           reducers: './app/reducers',
-          store: './app/store'
+          store: './app/store',
+          types: './app/types'
         }
       }
     ],

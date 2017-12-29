@@ -26,6 +26,9 @@ module.exports = {
   settings: {
     flowtype: {
       onlyFilesWithFlowAnnotation: true
+    },
+    "import/resolver": {
+      "babel-module": {}
     }
   }
 }

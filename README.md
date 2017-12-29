@@ -49,6 +49,7 @@ It's configuration uses environment separation. For settings special environment
 | /app/pages        | React components with page logic                  |
 | /app/reducers     | Redux reducers                                    |
 | /app/store        | Redux store                                       |
+| /app/types        | Types for Flow                                    |
 | /app/app.js       | Application entry point                           |
 | /app/index.html   | Application startup html                          |
 | /config           | Project configuration                             |
