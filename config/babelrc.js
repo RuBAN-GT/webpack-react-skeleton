@@ -1,7 +1,7 @@
 module.exports = {
   env: {
     test: {
-      plugins: ['transform-es2015-modules-commonjs']
+      plugins: ['dynamic-import-node', 'transform-es2015-modules-commonjs']
     }
   },
   plugins: [
@@ -36,6 +36,7 @@ module.exports = {
   ],
   presets: [
     [
+      'flow',
       'env',
       {
         modules: process.env.NODE_ENV == 'production' ? 'commonjs' : false,
@@ -43,7 +44,6 @@ module.exports = {
         useBuiltIns: true
       }
     ],
-    'react',
-    'flow'
+    'react'
   ]
 }

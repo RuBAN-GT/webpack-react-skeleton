@@ -1,0 +1,6 @@
+{
+  "includeGlob": ["app/**/*.js", "app/**/*.jsx"],
+  "outputDir": "tmp/flow",
+  "threshold": 90,
+  "type": ["html", "text"]
+}

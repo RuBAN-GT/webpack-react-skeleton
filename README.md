@@ -18,7 +18,9 @@ Or start development server:
 
 ### Scripts
 
-It's configuration uses environment separation. For settings special environment you must set `NODE_ENV`. The default environment is `development`.
+It's configuration uses environment separation. 
+For settings special environment you must set `NODE_ENV`. 
+The default environment is `development`.
 
 **Package scripts:**
 
@@ -29,6 +31,7 @@ It's configuration uses environment separation. For settings special environment
 | watch          | Watch changes with unassigned environment.        |
 | eslint         | Check your project with eslint.                   |
 | eslint:fix     | Fix project conflicts with eslint.                |
+| flow:report    | Generate flow coverage information for app dir    |
 | precommit      | Run precommit hook                                |
 | prettier       | Handle application files with Prettier.           |
 | prettier:write | Write handling of Prettier in your source.        |
@@ -58,3 +61,10 @@ It's configuration uses environment separation. For settings special environment
 | /config/webpack   | Webpack configuration by environments             |
 | /dist             | Webpack bundle                                    |
 | /vendor           | Vendor libs                                       |
+
+## TODO
+
+* [ ] Add examples with skeleton features  
+* [ ] Resolve webpack context for jest and flow with mocks  
+* [ ] Full coverage with flow
+* [ ] Integrate with Yeoman
