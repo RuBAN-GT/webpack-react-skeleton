@@ -3,6 +3,7 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'react-router-redux'
+import { hot } from 'react-hot-loader'
 
 import routes from '~/routes'
 
@@ -23,4 +24,4 @@ class RootContainer extends Component<Props> {
   }
 }
 
-export default RootContainer
+export default hot(module)(RootContainer)

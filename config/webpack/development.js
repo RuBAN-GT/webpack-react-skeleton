@@ -2,12 +2,7 @@ const webpack = require('webpack')
 const path = require('path')
 
 module.exports = {
-  entry: [
-    'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:3333',
-    'webpack/hot/only-dev-server',
-    path.join(__dirname, '../../app/index.js')
-  ],
+  entry: [path.join(__dirname, '../../app/index.js')],
   output: { filename: 'js/[name].js' },
   devServer: {
     contentBase: path.resolve(__dirname, '../../dist'),
@@ -18,11 +13,7 @@ module.exports = {
       warnings: false,
       errors: true
     },
-    port: 3333,
-    watchOptions: {
-      aggregateTimeout: 300,
-      poll: 1000
-    }
+    port: 3333
   },
   devtool: 'inline-source-map',
   plugins: [
