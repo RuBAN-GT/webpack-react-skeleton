@@ -35,8 +35,8 @@ module.exports = {
     'transform-class-properties'
   ],
   presets: [
+    'flow',
     [
-      'flow',
       'env',
       {
         modules: process.env.NODE_ENV == 'production' ? 'commonjs' : false,
