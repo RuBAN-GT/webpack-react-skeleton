@@ -2,6 +2,10 @@ const fs = require('fs')
 const path = require('path')
 
 describe('Structure of project', () => {
+  it('checks current env', () => {
+    expect(process.env.NODE_ENV).toBe('test')
+  })
+
   it('checks existing of project directories', () => {
     const directories = [
       '../app',
@@ -15,6 +19,7 @@ describe('Structure of project', () => {
       '../app/stylesheets',
       '../app/types',
       '../config',
+      '../config/flow',
       '../config/misc',
       '../config/variables',
       '../config/webpack'
