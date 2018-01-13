@@ -1,6 +1,6 @@
 // @flow
 
-import type { DispatchType, StateType } from './'
+import type { DispatchType, StateType } from 'types'
 
 export type ThunkActionType = (
   dispatch: DispatchType,

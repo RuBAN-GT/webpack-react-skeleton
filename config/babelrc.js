@@ -1,9 +1,4 @@
 module.exports = {
-  env: {
-    test: {
-      plugins: ['dynamic-import-node', 'transform-es2015-modules-commonjs']
-    }
-  },
   plugins: [
     [
       'flow-runtime',
@@ -39,7 +34,7 @@ module.exports = {
     [
       'env',
       {
-        modules: process.env.NODE_ENV == 'production' ? 'commonjs' : false,
+        modules: process.env.NODE_ENV == 'development' ? false : 'commonjs',
         targets: { browsers: ['last 5 versions'] },
         useBuiltIns: true
       }
